@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,500;0,600;0,900;1,500&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            font-family: 'Poppins', sans-serif;
+            font-family: 'Source Sans Pro', sans-serif;
+            margin: 0;
+        }
+        
+        header {
+    background-color: #333333 ;
+    color: white ;
+    padding: 10px 0 ;
+    position: sticky;
+    top: 0;
+}
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    margin: 20px;
+}
+.card {
+    border: 2px solid #A5A5A5 ;
+    padding: 20px;
+    border-radius: 8px;
+}
+.price {
+    float: right;
+}
+.top {
+    padding-bottom:  20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid blue;
+}
+.status {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 5px;
+}
+.status-chip {
+    padding: 5px;
+    border-radius: 4px;
+}
+.case-number {
+    color :#A5A5A5; 
+    font-size: 14px;
+}
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+}
+.from-location {
+    font-weight: 900;
+}
+.to-location {
+    color: #A5A5A5 ;
+    font-size: 14px;;
+}
+
+
+.completed {
+    background-color: green;
+    color: white ;
+}
+.pending {
+    background-color: yellow;
+}
+.approved {
+    background-color: royalblue;
+    color: white ; 
+}
+.cancelled {
+    background-color: red;
+    color: white ;
+}
+
+/* 
+    screen > 1000px 4 elements
+
+    800px < screen < 1000px 3 elements
+
+    600px < screen < 800px 2 elements
+
+    screen < 600px 1 elements
+
+
+*/
+
+@media (max-width: 1000px)  and (min-width: 800px) {
+     .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+     }
+}
+
+@media (max-width: 800px) and (min-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: auto ;
+     }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Auction Status App</h1>
+    </header>
+    <section class="cards-container">
+       
+        
+    </section>
+
+    <script src="./index.js"></script>
+</body>
+</html>
